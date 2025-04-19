@@ -11,31 +11,67 @@
             align-items: center;
             height: 100vh;
             margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #ff99cc, #ff66b2); /* Gradient background */
+            color: #fff;
         }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
         .download-button {
-            padding: 15px 30px;
-            font-size: 18px;
-            background-color: #4CAF50;
+            padding: 20px 40px;
+            font-size: 20px;
+            background-color: #ff66b2;
             color: white;
             border: none;
-            border-radius: 5px;
+            border-radius: 25px;
             cursor: pointer;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            text-transform: uppercase;
+            font-weight: bold;
         }
+
         .download-button:hover {
-            background-color: #45a049;
+            background-color: #ff3385;
+            transform: scale(1.05);
+        }
+
+        .download-button:active {
+            background-color: #ff1a5b;
+            transform: scale(0.98);
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 16px;
+            margin-bottom: 30px;
+            line-height: 1.5;
         }
     </style>
 </head>
 <body>
-    <button class="download-button" onclick="downloadAPK()">Download App</button>
+
+    <div class="container">
+        <h1>Download Your QR Code Reader App</h1>
+        <p>Click the button below to download the app and start scanning QR codes effortlessly.</p>
+        <button class="download-button" onclick="downloadAPK()">Download App</button>
+    </div>
 
     <script>
         function downloadAPK() {
-            window.location.href = 'https://github.com/rawanabuzir/QR-reader-/releases/download/untagged-1b7ed0b9b9133ba09d84/app-release.apk'; // Replace with the actual URL/path to your APK file
+            window.location.href = 'https://github.com/rawanabuzir/QR-reader-/releases/download/v2.0.0/app-release.apk'; // Replace with the actual URL/path to your APK file
         }
     </script>
+
 </body>
 </html>
